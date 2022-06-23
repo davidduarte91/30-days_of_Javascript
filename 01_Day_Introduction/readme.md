@@ -169,4 +169,57 @@ console.log(typeof undefined); // undefined
 ## Variables
 Las variables son contenedores de data. Son usados para almacenar datos en un lugar de la memoria. Para declarar variables usamos _var, let,_ o _const_ keywords.
 
-Para una variable que cambia en un momento diferente, usamos _let_. Si el dato no cambia usamos _const_. Por ejemplo PI, nombre de un país, gravedad son valores que no cambian. No vamos a usar var y no lo recomiendo. Es una forma propensa a errores de declarar una variable que tiene muchas fugas. De eso se hablará más adelante con el tema del scope
+Para una variable que cambia en un momento diferente, usamos _let_. Si el dato no cambia usamos _const_. Por ejemplo PI, nombre de un país, gravedad son valores que no cambian. No vamos a usar var y no lo recomiendo. Es una forma propensa a errores de declarar una variable que tiene muchas fugas. De eso se hablará más adelante con el tema del scope.
+
+Un nombre válido de variable debe seguir las siguientes reglas
+- No debe comenzar con un número
+- No admite caracteres especiales (excepto el signo del dólar y el guión bajo)
+- Debe seguir la convención del camelCase
+- No debe tener espacios entre palabras
+Los siguientes son ejemplos de variales de Javascript válidas
+```js
+firstName
+lastName
+country
+city
+capitalCity
+age
+isMarried
+
+first_name
+last_name
+is_married
+capital_city
+
+num1
+num_1
+_num_1
+$num1
+year2020
+year_2020
+```
+Usaremos camelCase (con una joroba) para declarar variables y CamelCase (dos jorobas) para declarar clases
+
+Ejemplos de variables no válidas:
+```js
+firts-name
+1_num
+num_#_1
+```
+La sintaxis es la siguiente:
+```js
+let nameOfVariable = value;
+```
+**Ejemplos de declaración de variables**
+```js
+// Declarando variables con diferentes tipos de datos
+let firstName = "David"; // primer nombre de una persona
+let lastName = "Emmanuel" // segundo nombre de una persona
+let country = "Paraguay" // pais
+let city = "Asunción" // ciudad capital
+let age = 100 // edad en años
+let isMarried = true 
+
+console.log(firstName, lastName, country, city, age, isMarried);
+// David Emmanuel Paraguay Asunción 100 true
+```
