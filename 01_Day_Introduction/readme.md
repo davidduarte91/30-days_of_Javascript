@@ -221,5 +221,20 @@ let age = 100 // edad en años
 let isMarried = true 
 
 console.log(firstName, lastName, country, city, age, isMarried);
+```
 // David Emmanuel Paraguay Asunción 100 true
+```js
+// Declarando variables con valores en números
+let age = 100 // edad en años
+const gravity = 9.81 // gravedad de la tierra en m/s2
+const boilingPoint = 100 // punto de ebullición del agua en °C
+const PI = 3.14 // constante geométrica
+console.log(gravity, boilingPoint, PI);
+// 9.81 100 3.14
+```
+```js
+//Las variables pueden ser declaradas en una sola línea separadas por un coma, pero es recomendable una linea por variable para facilitar la lectura
+let name = "Aruna", job = 'teacher', live = 'Argentina';
+console.log(name, job, live);
+// Aruna teacher Argentina
 ```
