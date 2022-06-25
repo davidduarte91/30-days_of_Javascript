@@ -187,4 +187,73 @@ Conectar dos o más caracteres juntos se llama concatenación. Usando los string
 let fullName = firstName + space + lasName; // concatenación, fusionando dos cadenas juntas
 console.log(fullName); // David Duarte
 ```
-Podemos concatenar cadenas de diferentes maneras
+Podemos concatenar cadenas de diferentes maneras.
+#### Concatenando usando el operador de suma
+Contatenar con el operador de suma es una forma antigua. Esta forma de concatenar es tediosa y propensa a errores. Es bueno saber cómo concatenar de esta manera, pero recomiendo enfáticamente usar las cadenas de plantilla ES6 (explicadas más adelante).
+```js
+// Declarando variables de diferentes tipos de datos
+let space = ' ';
+let firstName = 'David';
+let lastName = 'Duarte';
+let country = 'Paraguay';
+let city = 'Asunción';
+let language = 'Javascript';
+let job = 'teacher';
+let age = 30;
+
+let fullName = firstName + space + lastName;
+let personInfoOne = fullName + '. I am ' + age + '. I live in ' + country; // ES5 string addition
+
+console.log(personInfoOne);
+```
+```js
+David Duarte. I am 30. I live in Paraguay
+```
+#### Strings literales largas
+Una cadena puede ser un solo carácter, un párrafo o una página. Si la longitud de la cadena es demasiado grande, no cabe en una línea. Podemos usar el carácter de barra invertida (\) al final de cada línea para indicar que la cadena continuará en la línea siguiente. Ejemplo:
+```js
+const paragraph = "Mi nombre es David Duarte. Vivo en Buenos Aires, Argentina. \
+Soy un profesor y me encanta enseñar. Enseño HTML, CSS, Javascript, React, Redux, \
+Node.js, Python, Data Analysis and D3.js para todos los que están interesados en aprender. \
+En el final del 2019, he pensado en extender mi enseñanza y para alcanzar \
+a una audiencia global comencé un desafío de Python desde Noviembre 2019 a Diciembre del 2019. \
+Eso fue una de las más gratificantes e inspiradoras experiencias.\
+Ahora, estamos en el 2020. Estoy disfrutando preparando los 30DaysOfJavascript challenge y \
+espero que lo estés disfrutando también."
+
+console.log(paragraph);
+```
+#### Secuencia de escapes en Strings
+En JavaScript y otros lenguajes de programación \ seguido de algunos caracteres es una secuencia de escape. Veamos los caracteres de escape más comunes:
+- \n: nueva linea
+- \t: Tab, significa 8 espacios
+- \\: Barra invertida
+- \': comilla simple (')
+- \": comilla doble (")
+```js
+console.log('Espero que todo estés disfrutando de este curso.\n¿Vos lo estás disfrutando?');
+console.log('Days\tTopics\tExercises');
+console.log('Day 1\t3\t5')
+console.log('Day 2\t3\t5')
+console.log('Day 3\t3\t5')
+console.log('Day 4\t3\t5')
+console.log('This is a backslash  symbol (\\)') // para escribir barras invertidas
+console.log('In every programming language it starts with \"Hello, World!\"')
+console.log("In every programming language it starts with \'Hello, World!\'")
+console.log('The saying \'Seeing is Believing\' isn\'t correct in 2020')
+```
+Salida en consola:
+```sh
+Espero que todos estén disfrutando de este curso.
+¿Vos los estás disfrutando?
+Days  Topics  Exercises
+Day 1 3 5
+Day 2 3 5
+Day 3 3 5
+Day 4 3 5
+This is a backslash  symbol (\)
+In every programming language it starts with "Hello, World!"
+In every programming language it starts with 'Hello, World!'
+The saying 'Seeing is Believing' isn't correct in 2020
+```
+

@@ -95,7 +95,7 @@ console.log(Math.cos(60)); // -0.9524129804151563
 */
 
 // --------------------------------
-
+/*
 let randomNum = Math.random(); // genera desde el 0 al 0.999...
 let numBtnZeroAndTen = randomNum * 11
 
@@ -103,10 +103,53 @@ console.log(numBtnZeroAndTen); // esto da como mínimo 0 y máximo 10.9999
 
 let randomNumRoundToFloor = Math.floor(numBtnZeroAndTen);
 console.log(randomNumRoundToFloor);
-
+*/
 // --------------------------------
+/*
 let space = ' '           // an empty space string
 let firstName = 'David'
 let lastName = 'Duarte'
 let fullName = firstName + space + lastName;
 console.log(fullName);
+*/
+// --------------------------------
+/*
+let space = ' ';
+let firstName = 'David';
+let lastName = 'Duarte';
+let country = 'Paraguay';
+let city = 'Asunción';
+let language = 'Javascript';
+let job = 'teacher';
+let age = 30;
+
+let fullName = firstName + space + lastName;
+let personInfoOne = fullName + '. I am ' + age + '. I live in ' + country; // ES5 string addition
+
+console.log(personInfoOne);
+*/
+// ------------------------------
+/*
+const paragraph = "Mi nombre es David Duarte. Vivo en Buenos Aires, Argentina. \
+Soy un profesor y me encanta enseñar. Enseño HTML, CSS, Javascript, React, Redux, \
+Node.js, Python, Data Analysis and D3.js para todos los que están interesados en aprender. \
+En el final del 2019, he pensado en extender mi enseñanza y para alcanzar \
+a una audiencia global comencé un desafío de Python desde Noviembre 2019 a Diciembre del 2019. \
+Eso fue una de las más gratificantes e inspiradoras experiencias.\
+Ahora, estamos en el 2020. Estoy disfrutando preparando los 30DaysOfJavascript challenge y \
+espero que lo estés disfrutando también."
+
+console.log(paragraph);
+*/
+
+// -------------------------------
+console.log('Espero que todo estés disfrutando de este curso.\n¿Vos lo estás disfrutando?');
+console.log('Days\tTopics\tExercises');
+console.log('Day 1\t3\t5')
+console.log('Day 2\t3\t5')
+console.log('Day 3\t3\t5')
+console.log('Day 4\t3\t5')
+console.log('This is a backslash  symbol (\\)') // para escribir barras invertidas
+console.log('In every programming language it starts with \"Hello, World!\"')
+console.log("In every programming language it starts with \'Hello, World!\'")
+console.log('The saying \'Seeing is Believing\' isn\'t correct in 2020')
