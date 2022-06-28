@@ -263,7 +263,7 @@ console.log(country.substring(4));      // guay
 */
 
 // ----------------------------------
-
+/*
 let string = '30 Days Of JavaScript';
 
 console.log(string.split()) // lo transforma en un array -> ["30 Days Of JavaScript"]
@@ -278,3 +278,201 @@ let countries = 'Finland, Sweden, Norway, Denmark, and Iceland';
 
 console.log(countries.split(',')) // divide con coma y lo convierte en array -> ['Finland', ' Sweden', ' Norway', ' Denmark', ' and Iceland']
 console.log(countries.split(', '))  // El separador es la coma y el espacio -> ['Finland', 'Sweden', 'Norway', 'Denmark', 'and Iceland']
+*/
+
+// ----------------------------------
+/*
+let string = '   30 días de Javascript   ';
+console.log(string);
+console.log(string.trim())
+
+let firstName = '  David ';
+console.log(firstName);
+console.log(firstName.trim())
+*/
+
+// --------------------------------
+/*
+let string = '30 Days Of JavaScript';
+
+console.log(string.includes('Days'));   // true
+console.log(string.includes('days'));   // false - es sensible a mayúsculas y minúsculas
+console.log(string.includes('Script'));  // true
+console.log(string.includes('script'));  // false
+console.log(string.includes('java'));   //false
+console.log(string.includes('Java'));   // true
+
+let country = 'Finland';
+
+console.log(country.includes('fin'));   // false
+console.log(country.includes('Fin'));   // true
+console.log(country.includes('land'));  // true
+console.log(country.includes('Land'));    // false
+*/
+
+// ---------------------------------
+/*
+let string = '30 Days Of JavaScript';
+console.log(string.replace('JavaScript', 'Python')) // 30 Days Of Python
+
+let country = 'Finland';
+console.log(country.replace('Fin', 'Noman'))    // Nomanland
+*/
+
+// -----------------------------------
+/*
+let string = '30 Days Of JavaScript';
+console.log(string.charAt(0));  // 3
+
+let lastIndex = string.length - 1;
+console.log(string.charAt(lastIndex));  // t
+*/
+
+// ------------------------------------
+/*
+let string = '30 Days Of JavaScript'
+console.log(string.charCodeAt(3));  // Número D ASCII es 68
+
+let lastIndex = string.length - 1;
+console.log(string.charCodeAt(lastIndex))   // t ASCII es 116
+*/
+
+// ------------------------------------
+/*
+let string = '30 Days Of JavaScript';
+
+console.log(string.indexOf('D'));   // 3
+console.log(string.indexOf('Days'));    // 3
+console.log(string.indexOf('days'));    // -1
+console.log(string.indexOf('a'));   // 4
+console.log(string.indexOf('JavaScript'));  // 11
+console.log(string.indexOf('Script'));  // 15
+console.log(string.indexOf('script'));  // -1
+*/
+
+// -------------------------------------
+/*
+let string = 'I love JavaScript. If you do not love JavaScript what else can you love.';
+
+console.log(string.lastIndexOf('love'));    //67
+console.log(string.lastIndexOf('you'));     //63
+console.log(string.lastIndexOf('JavaScript'));  // 38 - la J del último 'JavaScript' está en la posición 38
+*/
+
+// -----------------------------------
+/*
+let string = '30';
+console.log(string.concat("Days", "Of", "JavaScript"))  //30DaysOfJavaScript
+
+let country = 'Para';
+console.log(country.concat('guay')) // Paraguay
+*/
+
+// ----------------------------------
+/*
+let string = 'Love is the best to in this world';
+
+console.log(string.startsWith('Love')); // true
+console.log(string.startsWith('love')); // false
+console.log(string.startsWith('world'));    // false
+
+let country = 'Finland';
+
+console.log(country.startsWith('Fin'))  // true
+console.log(country.startsWith('fin'))  // false
+console.log(country.startsWith('land')) // false
+*/
+
+// ---------------------------------
+/*
+let string = 'Love is the most powerful feeling in the world'
+
+console.log(string.endsWith('world'))   // true
+console.log(string.endsWith('love'))    // false
+console.log(string.endsWith('in the world'))  // true
+
+let country = 'Finland';
+
+console.log(country.endsWith('land'))   // true
+console.log(country.endsWith('fin'))    // false
+console.log(country.endsWith('Find'))   // false
+*/
+
+// ------------------------------------
+/*
+let string = 'I love JavaScript. If you do not love JavaScript what else can you love.';
+console.log(string.search('love')) // 2 - La letra l del primer love está en la posición 2
+console.log(string.search(/javascript/gi))  // 7
+*/
+
+// ----------------------------
+/*
+let string = 'I love JavaScript. If you do not love JavaScript what else can you love.';
+console.log(string.match('love'))   // ["love", index: 2, input: "I love JavaScript. If you do not love JavaScript what else can you love.", groups: undefined]
+
+let pattern = /love/gi
+console.log(string.match(pattern))  // ['love', 'love', 'love']
+*/
+
+// -------------------------------
+/*
+let txt = 'In 2019, I ran 30 Days of Python. Now, in 2020 I am super exited to start this challenge';
+let regEx = /\d/g;
+// d con carácter de escape significa que d no es una d normal sino que actúa como un dígito
+// + significa uno o más dígitos,
+// si hay una g después de eso, significa global, busque en todas partes.
+
+console.log(txt.match(regEx)); // ['2', '0', '1', '9', '3', '0', '2', '0', '2', '0']
+console.log(txt.match(/\d+/g)) // ['2019', '30', '2020']
+*/
+
+// --------------------------------
+/*
+let string = 'love';
+console.log(string.repeat(10)); // lovelovelovelovelovelovelovelovelovelove
+*/
+
+// ----------------------------------
+
+// Diferentes tipos de datos de javascript
+// Vamos a declarar diferentes tipos de variables
+/*
+let firstName = 'Asabeneh'      // string
+let lastName = 'Yetayeh'        // string
+let country = 'Finland'         // string
+let city = 'Helsinki'           // string
+let age = 250                   // number, it is not my real age, do not worry about it
+let job                         // undefined, because a value was not assigned
+
+console.log(typeof 'Asabeneh')  // string
+console.log(typeof firstName)   // string
+console.log(typeof 10)          // number
+console.log(typeof 3.14)        // number
+console.log(typeof true)        // boolean
+console.log(typeof false)       // boolean
+console.log(typeof NaN)         // number
+console.log(typeof job)         // undefined
+console.log(typeof undefined)   // undefined
+console.log(typeof null)        // object
+*/
+
+// ------------------------------------
+/*
+let num = '10';
+let numInt = parseInt(num);
+console.log(numInt)   // 10
+*/
+/*
+let num = '10'
+let numInt = Number(num)
+console.log(numInt)     // 10
+*/
+/*
+let num = '10';
+let numInt = +num;
+console.log(numInt)     //10
+*/
+
+let num = 9.81
+let numInt = parseInt(num)
+console.log(numInt)

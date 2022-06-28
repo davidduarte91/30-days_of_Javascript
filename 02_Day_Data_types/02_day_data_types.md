@@ -375,3 +375,280 @@ console.log(country.substring(4, 8));   // guay
 console.log(country.substring(4));      // guay
 ```
 7. _split()_: El método split divide una cadena en un lugar específico.
+```js
+let string = '30 Days Of JavaScript';
+
+console.log(string.split()) // lo transforma en un array -> ["30 Days Of JavaScript"]
+console.log(string.split(' ')) // lo transforma en un array con 4 items -> ['30', 'Days', 'Of', 'JavaScript']
+
+let firstName = 'David';
+
+console.log(firstName.split()) // Lo convierte en un array -> ['David']
+console.log(firstName.split('')) // divide cada letra y lo convierte en un array -> ['D'. 'a', 'v', 'i', 'd']
+
+let countries = 'Finland, Sweden, Norway, Denmark, and Iceland';
+
+console.log(countries.split(',')) // divide con coma y lo convierte en array -> ['Finland', ' Sweden', ' Norway', ' Denmark', ' and Iceland']
+console.log(countries.split(', '))  // El separador es la coma y el espacio -> ['Finland', 'Sweden', 'Norway', 'Denmark', 'and Iceland']
+```
+8. _trim()_: Remueve los espacios en el principio o en el final de un string.
+```js
+let string = '   30 días de Javascript   ';
+console.log(string);
+console.log(string.trim())
+
+let firstName = '  David ';
+console.log(firstName);
+console.log(firstName.trim())
+```
+```sh
+   30 días de Javascript   
+30 días de Javascript
+   David 
+David
+```
+9. _includes()_: Toma un argumento de subcadena y verifica si existe un argumento de subcadena en la cadena. include() devuelve un valor booleano. Si existe una subcadena en una cadena, devuelve verdadero; de lo contrario, devuelve falso.
+```js
+let string = '30 Days Of JavaScript';
+
+console.log(string.includes('Days'));   // true
+console.log(string.includes('days'));   // false - es sensible a mayúsculas y minúsculas
+console.log(string.includes('Script'));  // true
+console.log(string.includes('script'));  // false
+console.log(string.includes('java'));   //false
+console.log(string.includes('Java'));   // true
+
+let country = 'Finland';
+
+console.log(country.includes('fin'));   // false
+console.log(country.includes('Fin'));   // true
+console.log(country.includes('land'));  // true
+console.log(country.includes('Land'));    // false
+```
+10. _replace()_: Toma como parámetro la subcadena antigua y una nueva subcadena.
+```js
+string.replace(oldsubstring, newsubstring)
+```
+```js
+let string = '30 Days Of JavaScript';
+console.log(string.replace('JavaScript', 'Python')) // 30 Days Of Python
+
+let country = 'Finland';
+console.log(country.replace('Fin', 'Noman'))    // Nomanland
+```
+11. _charAt()_: Toma un índice y devuelve el valor en ese índice
+```js
+string.charAt(index)
+```
+```js
+let string = '30 Days Of JavaScript';
+console.log(string.charAt(0));  // 3
+
+let lastIndex = string.length - 1;
+console.log(string.charAt(lastIndex));  // t
+```
+12. _charCodeAt()_: Toma el índice y devuelve el código char (número ASCII) del valor en ese índice.
+```js
+string.charCodeAt(index)
+```
+```js
+let string = '30 Days Of JavaScript'
+console.log(string.charCodeAt(3));  // Número D ASCII es 68
+
+let lastIndex = string.length - 1;
+console.log(string.charCodeAt(lastIndex))   // t ASCII es 116
+```
+13. _indexOf()_: Toma una subcadena y si la subcadena existe en una cadena, devuelve la primera posición de la subcadena (en número); si no existe, devuelve -1
+```js
+string.indexOf(substring)
+```
+```js
+let string = '30 Days Of JavaScript';
+
+console.log(string.indexOf('D'));   // 3
+console.log(string.indexOf('Days'));    // 3
+console.log(string.indexOf('days'));    // -1
+console.log(string.indexOf('a'));   // 4
+console.log(string.indexOf('JavaScript'));  // 11
+console.log(string.indexOf('Script'));  // 15
+console.log(string.indexOf('script'));  // -1
+```
+14. _lastIndexOf()_: Toma una subcadena y si la subcadena existe en una cadena, devuelve la última posición de la subcadena (mostrando el índice de la primer letra de la subcadena); si no existe, devuelve -1
+```js
+string.lastIndexOf(substring)
+```
+```js
+let string = 'I love JavaScript. If you do not love JavaScript what else can you love.';
+
+console.log(string.lastIndexOf('love'));    //67
+console.log(string.lastIndexOf('you'));     //63
+console.log(string.lastIndexOf('JavaScript'));  // 38 - la J del último 'JavaScript' está en la posición 38
+```
+15. _concat()_: toma muchas subcadenas y las une
+```js
+string.concat(substring, substring, substring)
+```
+```js
+let string = '30';
+console.log(string.concat("Days", "Of", "JavaScript"))  //30DaysOfJavaScript
+
+let country = 'Para';
+console.log(country.concat('guay')) // Paraguay
+```
+16. _startsWith_: toma una subcadena como argumento y verifica si la cadena comienza con esa subcadena especificada. Devuelve un valor booleano (verdadero o falso).
+```js
+string.startsWith(substring)
+```
+```js
+let string = 'Love is the best to in this world';
+
+console.log(string.startsWith('Love')); // true
+console.log(string.startsWith('love')); // false
+console.log(string.startsWith('world'));    // false
+
+let country = 'Finland';
+
+console.log(country.startsWith('Fin'))  // true
+console.log(country.startsWith('fin'))  // false
+console.log(country.startsWith('land')) // false  
+```
+17. _endsWith_: toma una subcadena como argumento y verifica si la cadena termina con esa subcadena especificada. Devuelve un valor booleano (verdadero o falso).
+```js
+string.endsWith(substring)
+```
+```js
+let string = 'Love is the most powerful feeling in the world'
+
+console.log(string.endsWith('world'))   // true
+console.log(string.endsWith('love'))    // false
+console.log(string.endsWith('in the world'))  // true
+
+let country = 'Finland';
+
+console.log(country.endsWith('land'))   // true
+console.log(country.endsWith('fin'))    // false
+console.log(country.endsWith('Find'))   // false
+```
+18. _search_: toma una subcadena como argumento y devuelve el índice de la primera coincidencia. El valor de búsqueda puede ser una cadena o un patrón de expresión regular. No es case sensitive
+```js
+string.search(substring)
+```
+```js
+let string = 'I love JavaScript. If you do not love JavaScript what else can you love.';
+console.log(string.search('love')) // 2 - La letra l del primer love está en la posición 2
+console.log(string.search(/javascript/gi))  // 7 - g-significa buscar en todo el texto, i - no distingue entre mayúsculas y minúsculas
+```
+19. *match*: toma una subcadena o un patrón de expresión regular como argumento y devuelve una matriz si hay una coincidencia; de lo contrario, devuelve un valor nulo. Veamos cómo se ve un patrón de expresión regular. Comienza con el signo / y termina con el signo /
+```js
+let string = 'love';
+let patterOne = /love/  // sin ninguna bandera
+let patterTwo = /love/gi    // g-significa buscar en todo el texto, i - no distingue entre mayúsculas y minúsculas
+```
+Sintaxis de Match
+```js
+// syntax
+string.match(substring)
+```
+```js
+let string = 'I love JavaScript. If you do not love JavaScript what else can you love.';
+console.log(string.match('love'))
+```
+```sh
+["love", index: 2, input: "I love JavaScript. If you do not love JavaScript what else can you love.", groups: undefined]
+```
+```js
+let pattern = /love/gi
+console.log(string.match(pattern))  // ['love', 'love', 'love']
+```
+Extraigamos números del texto usando una expresión regular. Esta no es la sección de expresiones regulares, ¡no se asustes! Cubriremos las expresiones regulares más adelante.
+```js
+let txt = 'In 2019, I ran 30 Days of Python. Now, in 2020 I am super exited to start this challenge';
+let regEx = /\d/g;
+// d con carácter de escape significa que d no es una d normal sino que actúa como un dígito
+// + significa uno o más dígitos,
+// si hay una g después de eso, significa global, busque en todas partes.
+
+console.log(txt.match(regEx)); // ['2', '0', '1', '9', '3', '0', '2', '0', '2', '0']
+console.log(txt.match(/\d+/g)) // ['2019', '30', '2020']
+```
+20. *repeat()*: toma un número como argumento y devuelve la versión repetida de la cadena.
+```js
+string.repeat(n)
+```
+```js
+let string = 'love';
+console.log(string.repeat(10)); // lovelovelovelovelovelovelovelovelovelove
+```
+## Comprobación de tipos de datos y conversión
+### Comprobación de tipos de datos
+Para verificar el tipo de datos de una determinada variable, usamos el método typeof.
+**Ejemplo:**
+```js
+let firstName = 'Asabeneh'      // string
+let lastName = 'Yetayeh'        // string
+let country = 'Finland'         // string
+let city = 'Helsinki'           // string
+let age = 250                   // number, it is not my real age, do not worry about it
+let job                         // undefined, because a value was not assigned
+
+console.log(typeof 'Asabeneh')  // string
+console.log(typeof firstName)   // string
+console.log(typeof 10)          // number
+console.log(typeof 3.14)        // number
+console.log(typeof true)        // boolean
+console.log(typeof false)       // boolean
+console.log(typeof NaN)         // number
+console.log(typeof job)         // undefined
+console.log(typeof undefined)   // undefined
+console.log(typeof null)        // object
+```
+### Cambio del tipo de datos (Casting)
+- Casting: Conversión de un tipo de datos a otro tipo de datos. Usamos parseInt(), parseFloat(), Number(), signo +, str() Cuando hacemos operaciones aritméticas, los números de cadena deben convertirse primero en enteros o flotantes; de lo contrario, devuelve un error.
+#### String a entero
+Podemos convertir el número de cadena en un número. Cualquier número dentro de una comilla es un número de cadena. Un ejemplo de un número de cadena: '10', '5', etc. Podemos convertir una cadena en un número usando los siguientes métodos:
+- parseInt()
+- Number()
+- Plus sign(+)
+```js
+let num = '10';
+let numInt = parseInt(num);
+console.log(numInt)   // 10
+```
+```js
+let num = '10';
+let numInt = Bumber(num);
+console.log(numInt)   // 10
+```
+```js
+let num = '10';
+let numInt = +num;
+console.log(numInt)   // 10
+```
+#### String a decimal
+Podemos convertir un número flotante de cadena en un número flotante. Cualquier número flotante dentro de una comilla es un número flotante de cadena. Un ejemplo de un número flotante de cadena: '9.81', '3.14', '1.44', etc. Podemos convertir flotante de cadena a número usando los siguientes métodos:
+- parseFloat()
+- Number()
+- Signo más(+)
+```js
+let num = '9.81';
+let numFloat = parseFloat(num);
+console.log(numFloat)      //   9.81
+```
+```js
+let num = '9.81';
+let numFloat = Number(num);
+console.log(numFloat)      //   9.81
+```
+```js
+let num = '9.81';
+let numFloat = +num;
+console.log(numFloat)      //   9.81
+```
+#### Decimal a entero
+Podemos convertir números decimales a enteros. Usamos el siguiente método para convertir de decimal a entero:
+- parseInt
+```js
+let num = 9.81
+let numInt = parseInt(num)
+console.log(numInt)     // 9
+```
