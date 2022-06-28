@@ -257,3 +257,121 @@ In every programming language it starts with 'Hello, World!'
 The saying 'Seeing is Believing' isn't correct in 2020
 ```
 
+#### Literales de plantilla (Template Strings)
+Para crear template strings usamos dos back-ticks. Podemos inyectar datos como expresiones dentro de un template strings. Para inyectar datos, encerramos la expresion con un corchete ({}) precedido por el signo $. Veamos la sintaxis debajo
+```js
+// Sintaxis
+`String de texto literal`
+`String de texto literal ${expresión}`
+```
+**Ejemplo 1**
+```js
+console.log(`La suma de 2 y 3 es 5`) // escribiendo estáticamente los datos
+let a = 2;
+let b = 3;
+console.log(`La suma de ${a} y ${b} es ${a + b}`)
+```
+**Ejemplo 2**
+```js
+let firstName = 'David';
+let lastName = 'Duarte';
+let country = 'Paraguay';
+let city = 'Asunción';
+let language = 'Javascript';
+let job = 'teacher';
+let age = 250;
+let fullName = firstName + space + lastName;
+
+let personInfoTwo = `Yo soy ${fullName}. Tengo ${age} años. Vivo en el país de ${country}.`; // ES6 - Método de interpolación de strings
+let personInfoThree = `Yo soy ${fullName}. Vivo en ${city}, ${country}. Soy ${job}. Yo enseño ${language}`;
+console.log(personInfoTwo);
+console.log(personInfoThree);
+```
+```sh
+Yo soy David Duarte. Tengo 250 años. Vivo en el país de Paraguay.
+Yo soy David Duarte. Vivo en Asunción, Paraguay. Soy teacher. Yo enseño Javascript.
+```
+Usando template string o el método de interpolación de string, podemos añadir interpolaciones, que puede ser un valor o alguna operación (comparación, operaciones aritméticas, operaciones ternarias)
+```js
+let a = 2;
+let b = 3;
+console.log(`${a} es mayor que ${b}: ${a > b});
+```
+```sh
+2 es mayor que 3: false
+```
+### Métodos de Strings
+Todo en Javascript es un objeto. Un string es un tipo de dato primitivo que significa que no se puede modificar una vez que es creado. El objeto string tiene muchos métodos de string. Hay diferentes métodos de string que nos puede ayudar a trabajar con strings:
+1. _length_: El método _length_ retorna el número de caracteres en un string incluido el espacio vacío.
+**Ejemplo**
+```js
+let js = 'Javascript';
+console.log(js.length)  // 10
+
+let firstName = 'David';
+console.log(firstName.length);  // 5
+```
+2. Acceder a los caracteres de un string: Podemos acceder a cada carácter de una cadena utilizando su índice. En programación, el conteo comienza desde 0. El primer índice de la cadena es cero y el último índice es la longitud de la cadena menos uno.
+
+Accedamos a diferentes caracteres en la cadena 'JavaScript'.
+```js
+let string = 'Javascript';
+let firstLetter = string[0];
+
+console.log(firstLetter)    // J
+
+let seccondLetter = string[1];  // a
+let thirdLetter = string[2];
+let lastLetter = string[9];
+
+console.log(lastLetter) // t
+
+let lastIndex = string.length - 1;
+
+console.log(lastIndex)  // 9
+console.log(string[lastIndex])  // t
+```
+3. _toUpperCase()_: Este método cambia el string a letras mayúsculas.
+```js
+let string = 'Javascript';
+console.log(string.toUpperCase());  // JAVASCRIPT
+
+let firstName = 'David';
+console.log(firstName.toUpperCase())    // DAVID
+
+let country = 'Paraguay';
+console.log(country.toUpperCase());     // PARAGUAY
+```
+4. _toLowerCase()_: este método cambia el string a letras minúsculas.
+```js
+let string = 'Javascript';
+console.log(string.toLowerCase());  // javascript
+
+let firstName = 'David';
+console.log(firstName.toLowerCase());   // david
+
+let country = 'Paraguay';
+console.log(country.toLowerCase());     // paraguay
+```
+5. _substr()_: Se necesitan dos argumentos, el índice inicial y el número de caracteres para dividir. Es decir, desde qué letra arranca y la cantidad de letras a mostrar (se muestra como deprecado)
+```js
+let string = 'JavaScript';
+console.log(string.substr(4, 6))    // Script
+
+let country = 'Paraguay';
+console.log(country.substr(4, 4))   // guay
+```
+6. _susbstring()_: Toma dos argumentos, el índice inicial y el índice final, pero no incluye el caracter en el índice final. El segundo argumento se cuenta desde la primera letra, y no desde donde arranca el primer argumento
+```js
+let string = 'JavaScript';
+
+console.log(string.substring(0, 4));    //Java
+console.log(string.substring(4, 10));   // Script
+console.log(string.substring(4));       // Script
+
+let country = 'Paraguay';
+console.log(country.substring(0, 4));   // Para
+console.log(country.substring(4, 8));   // guay
+console.log(country.substring(4));      // guay
+```
+7. _split()_: El método split divide una cadena en un lugar específico.

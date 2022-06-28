@@ -143,6 +143,7 @@ console.log(paragraph);
 */
 
 // -------------------------------
+/*
 console.log('Espero que todo estés disfrutando de este curso.\n¿Vos lo estás disfrutando?');
 console.log('Days\tTopics\tExercises');
 console.log('Day 1\t3\t5')
@@ -153,3 +154,127 @@ console.log('This is a backslash  symbol (\\)') // para escribir barras invertid
 console.log('In every programming language it starts with \"Hello, World!\"')
 console.log("In every programming language it starts with \'Hello, World!\'")
 console.log('The saying \'Seeing is Believing\' isn\'t correct in 2020')
+*/
+
+// -------------------------------------
+/*
+let a = 2;
+let b = 3;
+console.log(`La suma de ${a} y ${b} es ${a + b}`)
+*/
+
+// -------------------------------------
+/*
+let firstName = 'David';
+let lastName = 'Duarte';
+let country = 'Paraguay';
+let city = 'Asunción';
+let language = 'Javascript';
+let job = 'teacher';
+let age = 250;
+let fullName = firstName + ' ' + lastName;
+
+let personInfoTwo = `Yo soy ${fullName}. Tengo ${age} años. Vivo en el país de ${country}.`; // ES6 - Método de interpolación de strings
+let personInfoThree = `Yo soy ${fullName}. Vivo en ${city}, ${country}. Soy ${job}. Yo enseño ${language}`;
+console.log(personInfoTwo);
+console.log(personInfoThree);
+*/
+
+// ----------------------------------
+/*
+let a = 2;
+let b = 3;
+console.log(`${a} es mayor que ${b}: ${a > b}`);
+*/
+
+// ----------------------------------
+/*
+let js = 'Javascript';
+console.log(js.length)  // 10
+
+let firstName = 'David';
+console.log(firstName.length);
+*/
+
+// -------------------------------------
+/*
+let string = 'Javascript';
+let firstLetter = string[0];
+
+console.log(firstLetter)
+
+let seccondLetter = string[1];  // a
+let thirdLetter = string[2];
+let lastLetter = string[9];
+
+console.log(lastLetter) // t
+
+let lastIndex = string.length - 1;
+
+console.log(lastIndex)  // 9
+console.log(string[lastIndex])
+*/
+
+// ---------------------------------
+/*
+let string = 'Javascript';
+console.log(string.toUpperCase());
+
+let firstName = 'David';
+console.log(firstName.toUpperCase())
+
+let country = 'Paraguay';
+console.log(country.toUpperCase());
+*/
+
+// -------------------------------
+/*
+let string = 'Javascript';
+console.log(string.toLowerCase());
+
+let firstName = 'David';
+console.log(firstName.toLowerCase());
+
+let country = 'Paraguay';
+console.log(country.toLowerCase());
+*/
+
+// --------------------------------
+/*
+let string = 'JavaScript';
+console.log(string.substr(4, 6))    // Script
+
+let country = 'Paraguay';
+console.log(country.substr(4, 4))   // guay
+*/
+
+// ------------------------------------
+/*
+let string = 'JavaScript';
+
+console.log(string.substring(0, 4));    //Java
+console.log(string.substring(4, 10));   // Script
+console.log(string.substring(4));       // Script
+
+let country = 'Paraguay';
+console.log(country.substring(0, 4));   // Para
+console.log(country.substring(4, 8));   // guay
+console.log(country.substring(4));      // guay
+*/
+
+// ----------------------------------
+
+let string = '30 Days Of JavaScript';
+
+console.log(string.split()) // lo transforma en un array -> ["30 Days Of JavaScript"]
+console.log(string.split(' ')) // lo transforma en un array con 4 items -> ['30', 'Days', 'Of', 'JavaScript']
+
+let firstName = 'David';
+
+console.log(firstName.split()) // Lo convierte en un array -> ['David']
+console.log(firstName.split('')) // divide cada letra y lo convierte en un array -> ['D'. 'a', 'v', 'i', 'd']
+
+let countries = 'Finland, Sweden, Norway, Denmark, and Iceland';
+
+console.log(countries.split(',')) // divide con coma y lo convierte en array -> ['Finland', ' Sweden', ' Norway', ' Denmark', ' and Iceland']
+console.log(countries.split(', '))  // El separador es la coma y el espacio -> ['Finland', 'Sweden', 'Norway', 'Denmark', 'and Iceland']
