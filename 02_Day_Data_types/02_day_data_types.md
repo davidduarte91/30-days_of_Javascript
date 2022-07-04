@@ -227,8 +227,8 @@ console.log(paragraph);
 En JavaScript y otros lenguajes de programación \ seguido de algunos caracteres es una secuencia de escape. Veamos los caracteres de escape más comunes:
 - \n: nueva linea
 - \t: Tab, significa 8 espacios
-- \\: Barra invertida
-- \': comilla simple (')
+- \\\\: Barra invertida
+- \\': comilla simple (')
 - \": comilla doble (")
 ```js
 console.log('Espero que todo estés disfrutando de este curso.\n¿Vos lo estás disfrutando?');
@@ -388,7 +388,7 @@ console.log(firstName.split('')) // divide cada letra y lo convierte en un array
 
 let countries = 'Finland, Sweden, Norway, Denmark, and Iceland';
 
-console.log(countries.split(',')) // divide con coma y lo convierte en array -> ['Finland', ' Sweden', ' Norway', ' Denmark', ' and Iceland']
+console.log(countries.split(',')) // divide con coma y lo convierte en array. En este caso hay un espacio antes de cada palabra dentro de las comillas -> ['Finland', ' Sweden', ' Norway', ' Denmark', ' and Iceland']
 console.log(countries.split(', '))  // El separador es la coma y el espacio -> ['Finland', 'Sweden', 'Norway', 'Denmark', 'and Iceland']
 ```
 8. _trim()_: Remueve los espacios en el principio o en el final de un string.
@@ -560,7 +560,7 @@ console.log(string.match('love'))
 let pattern = /love/gi
 console.log(string.match(pattern))  // ['love', 'love', 'love']
 ```
-Extraigamos números del texto usando una expresión regular. Esta no es la sección de expresiones regulares, ¡no se asustes! Cubriremos las expresiones regulares más adelante.
+Extraigamos números del texto usando una expresión regular. Esta no es la sección de expresiones regulares, ¡no se asustes! Cubriremos las expresiones regulares más adelante. Ver más sobre expresiones regulares (acá)[https://www.w3schools.com/jsref/jsref_obj_regexp.asp]
 ```js
 let txt = 'In 2019, I ran 30 Days of Python. Now, in 2020 I am super exited to start this challenge';
 let regEx = /\d/g;
@@ -616,7 +616,7 @@ console.log(numInt)   // 10
 ```
 ```js
 let num = '10';
-let numInt = Bumber(num);
+let numInt = Number(num);
 console.log(numInt)   // 10
 ```
 ```js
