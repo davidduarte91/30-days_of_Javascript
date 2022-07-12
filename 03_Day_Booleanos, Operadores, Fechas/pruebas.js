@@ -97,6 +97,7 @@ const agree = confirm('¿Estás seguro de querer borrarlo?')
 console.log(agree)
 */
 
+/*
 const now = new Date();
 console.log(now)
 
@@ -113,3 +114,24 @@ console.log(now.getHours())
 console.log(now.getMinutes())
 
 console.log(now.getSeconds())
+
+console.log(now.getTime())
+*/
+// ---------------------------------
+/*
+const allSeconds = Date.now()
+console.log(allSeconds)
+
+const timeInSeconds = new Date().getTime()
+console.log(allSeconds == timeInSeconds)
+*/
+// -------------------------------
+
+const now = new Date()
+const year = now.getFullYear() // retorna el año
+const month = now.getMonth() + 1 // retorna el mes (0 - 11)
+const date = now.getDate() // retorna la fecha (1 - 31)
+const hours = now.getHours() // retorna número (0 - 23)
+const minutes = now.getMinutes()
+
+console.log(`${date}/${month}/${year} ${hours}:${minutes}`) // 12/7/2022 11:44

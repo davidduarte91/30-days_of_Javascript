@@ -294,3 +294,31 @@ Let's extract or get the seconds from a time object.
 const now = new Date()
 console.log(now.getSeconds()) // 14, porque la hora es 23:42:14
 ```
+### Obteniendo el tiempo
+Este método da tiempo en milisegundos a partir del 1 de enero de 1970. También se conoce como tiempo Unix. Podemos obtener el tiempo de Unix de dos maneras:
+1. Usando *getTime()*
+```js
+const now = new Date()
+console.log(now.getTime()) // 1657635847323, este es el número de segundos que pasaron desde el 1 de Enero de 1970 al 12 de Julio del 2022 a las 11:29:15
+```
+
+2. Usando *Date.now()*
+```js
+const allSeconds = Date.now()
+console.log(allSeconds) // 1657635847323, este es el número de segundos que pasaron desde el 1 de Enero de 1970 al 12 de Julio del 2022 a las 11:29:15
+
+const timeInSeconds = new Date().getTime()
+console.log(allSeconds == timeInSeconds) // true
+```
+Vamos a formatear estos valores a un formato de tiempo legible por humanos. **Ejemplo:**
+```js
+const now = new Date()
+const year = now.getFullYear() // retorna el año
+const month = now.getMonth() // retorna el mes (0 - 11)
+const date = now.getDate() // retorna la fecha (1 - 31)
+const hours = now.getHours() // retorna número (0 - 23)
+const minutes = now.getMinutes() // retorna un número (0 - 59)
+
+console.log(`${date}/${month}/${year} ${hours}:${minutes}`) // 12/7/2022 11:44
+```
+## Día 3: Ejercicios
