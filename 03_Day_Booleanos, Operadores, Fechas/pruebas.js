@@ -126,7 +126,7 @@ const timeInSeconds = new Date().getTime()
 console.log(allSeconds == timeInSeconds)
 */
 // -------------------------------
-
+/*
 const now = new Date()
 const year = now.getFullYear() // retorna el año
 const month = now.getMonth() + 1 // retorna el mes (0 - 11)
@@ -135,3 +135,4 @@ const hours = now.getHours() // retorna número (0 - 23)
 const minutes = now.getMinutes()
 
 console.log(`${date}/${month}/${year} ${hours}:${minutes}`) // 12/7/2022 11:44
+*/

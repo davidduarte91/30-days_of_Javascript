@@ -321,4 +321,24 @@ const minutes = now.getMinutes() // retorna un número (0 - 59)
 
 console.log(`${date}/${month}/${year} ${hours}:${minutes}`) // 12/7/2022 11:44
 ```
-## Día 3: Ejercicios
+```js
+// Ejercicio Youtube: Mostrar la fecha y hora en el siguiente formato Día HH AM/PM : MM : SS
+
+let hoy = new Date();
+let días = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+
+let numeroDiaSemana = hoy.getDay();
+console.log(`Hoy es: ${días[numeroDiaSemana]}\n`)
+
+let horas = hoy.getHours();
+let minutos = hoy.getMinutes();
+let segundos = hoy.getSeconds();
+
+let jornada = horas >= 12 ? 'PM' : 'AM'; // se pueden definir variables con condicionales dentro
+
+minutos = ('o' + minutos).slice(-2) // a esta cadena de texto se le hace un rebanado de derecha a izquierda. Para que muestre los dos últimos caracteres
+segundos = ('o' + segundos).slice(-2)
+
+console.log(`${horas % 12} ${jornada} : ${minutos} : ${segundos}`) // el módulo por 12 sirve para el formato de 12 hs
+```
+
