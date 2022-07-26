@@ -227,7 +227,7 @@ console.log(result)
 */
 
 // Ejercicio Youtube: Mostrar la fecha y hora en el siguiente formato Día HH AM/PM : MM : SS
-
+/*
 let hoy = new Date();
 let días = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
 
@@ -244,16 +244,21 @@ minutos = ('o' + minutos).slice(-2) // a esta cadena de texto se le hace un reba
 segundos = ('o' + segundos).slice(-2)
 
 console.log(`${horas % 12} ${jornada} : ${minutos} : ${segundos}`) // el módulo por 12 sirve para el formato de 12 hs
-
+*/
 
 // Cree un formato de hora legible por humanos usando el objeto de fecha y hora
-/*
+
 const now = new Date();
 const year = now.getFullYear();
 const month = now.getMonth() + 1;
 const day = now.getDate();
 const hour = now.getHours();
-const minute = now.getMinutes();
+let minute = now.getMinutes();
+let seconds = now.getSeconds();
 
-console.log(`${year}-${month}-${day} ${hour}:${minute}`)
-*/
+minute = ('0' + minute).slice(-2);
+seconds = ('0' + seconds).slice(-2);
+
+console.log(`${year}-${month}-${day} ${hour % 12}:${minute}:${seconds}`)
+console.log(`${day}-${month}-${year} ${hour % 12}:${minute}:${seconds}`)
+console.log(`${day}/${month}/${year} ${hour % 12}:${minute}:${seconds}`)
