@@ -99,7 +99,7 @@ console.log(charsInJavaScript) // (10) ['J', 'a', 'v', 'a', 'S', 'c', 'r', 'i',
 let stringCompañias = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon';
 const compañias = stringCompañias.split(',')
 
-console.log(compañias)
+console.log(compañias) // (7) ['Facebook', ' Google', ' Microsoft', ' Apple', ' IBM', ' Oracle', ' Amazon']
 
 let txt = 'Yo amo cantarle a Dios. Sé tocar el teclado, guitarra y batería';
 const words = txt.split(' ')
