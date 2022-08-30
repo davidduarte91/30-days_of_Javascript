@@ -6,32 +6,32 @@ En los lenguajes de programación para realizar tareas repetitivas utilizamos di
 
 ### for loop
 
-js```
+```js
 // Estructura for loop
 for(inicialización, condición, incremento/decremento) {
     // código va acá
 }
 ```
 
-js```
+```js
 for(let i = 0; i <= 5; i++) {
     console.log(i)
 }
 ```
 
-js```
+```js
 for (let i = 5; i >= 0; i--) {
     console.log(i)
 }
 ```
 
-js```
+```js
 for (let i = 0; i <= 5; i++) {
     console.log(`${i} * ${i} = ${i * i}`)
 }
 ```
 
-sh```
+```sh
 0 * 0 = 0
 1 * 1 = 1
 2 * 2 = 4
@@ -40,7 +40,7 @@ sh```
 5 * 5 = 25
 ```
 
-js```
+```js
 const paises = ['Paraguay', 'Brasil', 'Argentina', 'Colombia'];
 const newArr = [];
 for (let i = 0; i < paises.length; i++) {
