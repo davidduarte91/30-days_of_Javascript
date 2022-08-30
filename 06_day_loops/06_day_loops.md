@@ -1,0 +1,3 @@
+# Día 6
+## Bucles
+La mayoría de las actividades que hacemos en la vida están llenas de repeticiones. Imagínese si le pido que imprima de 0 a 100 usando console.log(). Para implementar esta tarea simple, puede tomar de 2 a 5 minutos, este tipo de tarea tediosa y repetitiva se puede llevar a cabo usando loop. Si prefieres ver los videos, puedes consultar los [videotutoriales](https://www.youtube.com/channel/UCM4xOopkYiPwJqyKsSqL9mw)
